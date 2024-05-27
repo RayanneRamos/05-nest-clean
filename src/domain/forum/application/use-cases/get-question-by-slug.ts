@@ -1,7 +1,7 @@
 import { Either, left, right } from "src/core/either";
 import { QuestionsRepository } from "../repositories/questions-repository";
 import { ResourceNotFoundError } from "./errors/resource-not-found-error";
-import { Question } from "@prisma/client";
+import { Question } from "../../enterprise/entities/question";
 
 interface GetQuestionBySlugUseCaseRequest {
   slug: string;

@@ -17,7 +17,7 @@ import { QuestionsRepository } from "src/domain/forum/application/repositories/q
       provide: QuestionsRepository,
       useClass: PrismaQuestionsRepository,
     },
-    PrismaQuestionsRepository,
+    PrismaAnswerRepository,
     PrismaQuestionAttachmentsRepository,
     PrismaQuestionCommentsRepository,
   ],

@@ -32,7 +32,7 @@ Content-Type: application/json
 Authorization: Bearer {{authToken}}
 
 {
-  "title": "UEFA EURO 2024: Faltam 100 dias para o início do torneio",
+  "title": "Teste 1",
   "content": "Com apenas 100 dias restantes para o início do EURO 2024, preparativos e expectativas estão em alta para o maior torneio de seleções da Europa​."
 }
 

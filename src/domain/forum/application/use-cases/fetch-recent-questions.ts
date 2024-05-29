@@ -16,12 +16,12 @@ type FetchRecentQuestionsUseCaseResponse = Either<
 
 @Injectable()
 export class FetchRecentQuestionsUseCase {
-  constructor(private questionRepository: QuestionsRepository) {}
+  constructor(private questionsRepository: QuestionsRepository) {}
 
   async execute({
     page,
   }: FetchRecentQuestionsUseCaseRequest): Promise<FetchRecentQuestionsUseCaseResponse> {
-    const questions = await this.questionRepository.findManyRecent({ page });
+    const questions = await this.questionsRepository.findManyRecent({ page });
 
     return right({
       questions,

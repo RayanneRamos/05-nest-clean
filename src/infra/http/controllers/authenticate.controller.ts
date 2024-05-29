@@ -45,8 +45,6 @@ export class AutheticateController {
 
     const accessToken = this.jwt.sign({ sub: user.id });
 
-    const token = this.jwt.sign({ sub: "user-id" });
-
     return {
       access_token: accessToken,
     };

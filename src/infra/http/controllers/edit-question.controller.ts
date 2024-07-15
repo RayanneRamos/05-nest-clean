@@ -15,6 +15,7 @@ import { CurrentUser } from "src/infra/auth/current-user-decorator";
 const editQuestionBodySchema = z.object({
   title: z.string(),
   content: z.string(),
+  attachments: z.array(z.string().uuid()),
 });
 
 const bodyValidationPipe = new ZodValidationPipe(editQuestionBodySchema);

@@ -5,6 +5,7 @@ import { Answer } from "src/domain/forum/enterprise/entities/answer";
 import { PrismaService } from "../prisma.service";
 import { PrismaAnswerMapper } from "../mappers/prisma-answer-mapper";
 import { AnswerAttachmentsRepository } from "src/domain/forum/application/repositories/answer-attachments-repository";
+import { DomainEvents } from "src/core/events/domain-events";
 
 @Injectable()
 export class PrismaAnswerRepository implements AnswersRepository {
@@ -75,6 +76,8 @@ export class PrismaAnswerRepository implements AnswersRepository {
       this.answerAttachmentsRepository.deleteMany(
         answer.attachments.getRemovedItems()
       ),
+
+      DomainEvents.dispatchEventsForAggregate(answer.id),
     ]);
   }
 

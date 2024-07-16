@@ -3,9 +3,9 @@ import { PaginationParams } from "src/core/repositories/pagination-params";
 import { QuestionAttachmentsRepository } from "src/domain/forum/application/repositories/question-attachments-repository";
 import { QuestionsRepository } from "src/domain/forum/application/repositories/questions-repository";
 import { Question } from "src/domain/forum/enterprise/entities/question";
-import { InMemoryQuestionAttachmentsRepository } from "./in-memory-question-attachments-repository";
-import { InMemoryAttachmentsRepository } from "./in-memory-attachments-repository";
 import { InMemoryStudentRepository } from "./in-memory-students-repositoty";
+import { InMemoryAttachmentsRepository } from "./in-memory-attachments-repository";
+import { InMemoryQuestionAttachmentsRepository } from "./in-memory-question-attachments-repository";
 import { QuestionDetails } from "src/domain/forum/enterprise/entities/value-objects/question-details";
 
 export class InMemoryQuestionsRepository implements QuestionsRepository {

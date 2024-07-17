@@ -89,11 +89,6 @@ describe("Prisma Questions Repository (E2E)", () => {
 
     const slug = question.slug.value;
 
-    // await cacheRepository.set(
-    //   `question:${slug}:details`,
-    //   JSON.stringify({ empty: true })
-    // );
-
     let cached = await cacheRepository.get(`question:${slug}:details`);
 
     expect(cached).toBeNull();
